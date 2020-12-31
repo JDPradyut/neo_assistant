@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context="com.world.jd.disa.Settings">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        app:lottie_fileName="seticonng.json"
+        app:lottie_autoPlay="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_loop="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/setanim"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/setanim"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Voice"
+            android:onClick="voicechng"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:paddingLeft="30dp"
+            android:id="@+id/chv"
+            android:layout_marginTop="40dp"
+            android:background="@color/border_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="About Us"
+            android:onClick="sendAbout"
+            android:textColor="@color/black"
+            android:layout_below="@id/chv"
+            android:textSize="20dp"
+            android:paddingLeft="30dp"
+            android:background="@color/border_color"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            app:lottie_fileName="love.json"
+            app:lottie_autoPlay="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:lottie_loop="true"
+            android:forceHasOverlappingRendering="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/india"
+            android:text="Made with Love in INDIA"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

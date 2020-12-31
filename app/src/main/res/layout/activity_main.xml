@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/browse">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_alignParentTop="true"
+                android:visibility="invisible"
+                android:id="@+id/border1"/>
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:visibility="invisible"
+                android:id="@+id/webview"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seclay"
+            android:background="@drawable/back">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:id="@+id/border2"
+                android:visibility="invisible"
+                android:layout_height="30dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/usertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="Hello DISA!"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/testt"
+                android:drawablePadding="5dp"
+                android:layout_above="@id/asstext"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="70dp"
+                android:padding="5dp"
+                android:background="@drawable/usertxt" />
+
+
+
+            <TextView
+                android:id="@+id/asstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/dev"
+                android:layout_above="@+id/hintTxt"
+                android:layout_marginBottom="60dp"
+                android:textSize="18dp"
+                android:layout_marginRight="70dp"
+                android:text="Hello"
+                android:padding="5dp"
+                android:background="@drawable/asstxt"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_above="@id/hintTxt"
+                android:text="Header"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/peoView"
+                app:lottie_fileName="people.json"
+                app:lottie_autoPlay="true"
+                android:layout_centerHorizontal="true"
+                app:lottie_loop="true"
+                android:layout_above="@id/header"
+                android:layout_marginBottom="5dp"/>
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/startbtn"
+                android:forceHasOverlappingRendering="true"
+                android:layout_above="@id/space"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/boximg"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="viewBoxCt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/setimg"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="viewSettings"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button"
+                android:text="If it is taking long time...Tap the Below Button"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/hintTxt"
+                android:textStyle="italic"
+                android:visibility="invisible"
+                android:textColor="#DD2C00"
+                android:layout_marginBottom="23dp"/>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:onClick="startButton"
+                android:background="@drawable/saybtn"
+                android:layout_above="@+id/space"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="35dp"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_centerHorizontal="true"
+                android:layout_width="140dp"
+                android:visibility="invisible"
+                android:layout_height="140dp"
+                android:onClick="repeatCmd"
+                app:lottie_fileName="voiceanim.json"
+                app:lottie_autoPlay="true"
+                android:layout_above="@+id/space"
+                app:lottie_loop="true" />
+
+
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/space"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

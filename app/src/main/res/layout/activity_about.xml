@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.world.jd.disa.About"
+    android:background="@color/cardview_dark_background">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/appIcon"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/neoicon"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neo Assistant"
+        android:layout_below="@+id/appIcon"
+        android:fontFamily="@font/aclonica"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/appTitle"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/appTitle"
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_fileName="cross.json"
+            app:lottie_autoPlay="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/cross"
+            android:layout_marginTop="100dp"
+            android:forceHasOverlappingRendering="true"/>
+        <androidx.legacy.widget.Space
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/gap"
+            android:layout_marginTop="110dp"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="110dp"
+            android:layout_toLeftOf="@id/gap"
+            android:id="@+id/jd"
+            android:src="@drawable/jdpradyut"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="110dp"
+            android:id="@+id/ss"
+            android:layout_toRightOf="@id/gap"
+            android:src="@drawable/sanjay"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JD Pradyut"
+            android:textSize="20dp"
+            android:layout_below="@+id/jd"
+            android:layout_toLeftOf="@id/gap"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/jdtxt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdtxt"
+            android:text="Developer"
+            android:layout_toLeftOf="@id/gap"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lucifer"
+            android:textSize="20dp"
+            android:layout_below="@+id/jd"
+            android:layout_toRightOf="@id/gap"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/sstxt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sstxt"
+            android:text="Tester"
+            android:layout_toRightOf="@id/gap"
+            android:textColor="@color/black"/>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            app:lottie_fileName="love.json"
+            app:lottie_autoPlay="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:lottie_loop="true"
+            android:forceHasOverlappingRendering="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/india"
+            android:text="Made with Love in INDIA"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
